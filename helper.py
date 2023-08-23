@@ -330,9 +330,8 @@ def get_recommended_posts_for(user_id):
     # Get predicted ratings
     df_predicted_items = predict_rating_with_vectors(user_vectors, item_vectors)
     recommended_post_ids = df_predicted_items["post_id"].tolist()
-    predicted_ratings = df_predicted_items["predicted_rating"].tolist()
 
-    return [recommended_post_ids, predicted_ratings]
+    return recommended_post_ids
 
 
 # Read data from raw CSV files
